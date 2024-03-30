@@ -22,6 +22,7 @@
 #include "material/dynamiccolor/variant.h"
 #include "material/palettes/tones.h"
 #include "material/temperature/temperature_cache.h"
+#include <cmath>
 
 namespace material_color_utilities
 {

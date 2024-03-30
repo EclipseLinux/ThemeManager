@@ -22,9 +22,8 @@
 #include <cmath>
 #include <cstdint>
 #include <cstdio>
+#include <sstream>
 #include <string>
-
-#include "absl/strings/str_cat.h"
 
 namespace material_color_utilities
 {
@@ -190,7 +189,9 @@ namespace material_color_utilities
 	// For instance: hex_from_argb(0xff012345) == "ff012345"
 	std::string HexFromArgb(Argb argb)
 	{
-		return absl::StrCat(absl::Hex(argb));
+		std::stringstream stream;
+		stream << std::hex << argb;
+		return stream.str();
 	}
 
 	Argb IntFromLstar(const double lstar)

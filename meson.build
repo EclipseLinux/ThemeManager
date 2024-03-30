@@ -34,7 +34,8 @@ sources = [
 ]
 
 dependencies = [
-    dependency('cxxopts')
+    dependency('cxxopts'),
+    dependency('absl_container'),
 ]
 
 executable('eclipse-themes', sources: sources, dependencies: dependencies, include_directories: include_directories('src'))
