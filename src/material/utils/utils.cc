@@ -191,7 +191,11 @@ namespace material_color_utilities
 	{
 		std::stringstream stream;
 		stream << std::hex << argb;
-		return stream.str();
+		auto result = stream.str().substr(2);
+
+		std::transform(result.begin(), result.end(), result.begin(), ::toupper);
+
+		return result;
 	}
 
 	Argb IntFromLstar(const double lstar)
